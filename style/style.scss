@@ -83,14 +83,33 @@ justify-content: center;
 }
 .countDown div{
     flex-basis: 100px;
+    text-align: center;
 }
 .countDown div p{
     font-size: 60px;
     margin-bottom: 5px;
     margin-top: 5px;
     margin-left: 20px;
+    color: white;
+   
+
 }
 .countDown div span{
     margin-left: 20px;
+    font-size: 25px;
+    font-weight: bold;
 
+    color: white;
+
+}
+.countDown-heading{
+    color: white;
+    font-weight: bold;
+}
+.fifa-time{
+    color: white;
+    font-size: 30px;
+}
+.hide{
+    display:none;
 }
