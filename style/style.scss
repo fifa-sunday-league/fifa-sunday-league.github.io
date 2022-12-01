@@ -117,3 +117,43 @@ justify-content: center;
 .hide{
     display:none;
 }
+@media all and (max-width: 345px){
+    .countDown div p {
+        font-size: 34px;
+    }
+    .countDown div span {
+        font-size: 13px !important;
+    }
+}
+@media all and (max-width: 920px) {
+   body{
+    background-position: center;
+   } 
+   .main-content{
+    // width: auto;
+    top: 0;
+   }
+   .players-wrapper{
+    flex-direction: column;
+    width: 200px !important;
+   }
+   .player-img{
+    margin-top: 15px;
+   }
+   .countDown div span{
+    font-size: 20px;
+   }
+}
+
+@media all and (max-width: 1050px){
+.player-img{
+    width: 125px;
+    height: 125px;
+
+}
+.players-wrapper{
+    width: 100%;
+    
+    justify-content: space-around;
+}
+}

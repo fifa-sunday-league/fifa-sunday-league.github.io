@@ -120,4 +120,47 @@ body {
 .hide {
   display: none;
 }
+
+@media all and (max-width: 345px) {
+  .countDown div p {
+    font-size: 34px;
+  }
+  .countDown div span {
+    font-size: 13px !important;
+  }
+}
+
+@media all and (max-width: 920px) {
+  body {
+    background-position: center;
+  }
+  .main-content {
+    top: 0;
+  }
+  .players-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 200px !important;
+  }
+  .player-img {
+    margin-top: 15px;
+  }
+  .countDown div span {
+    font-size: 20px;
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .player-img {
+    width: 125px;
+    height: 125px;
+  }
+  .players-wrapper {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
 /*# sourceMappingURL=style.css.map */
