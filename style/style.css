@@ -158,11 +158,6 @@ body {
     width: 125px;
     height: 125px;
   }
-  .players-wrapper {
-    width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
 }
 
 .last-matches {
