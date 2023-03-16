@@ -2,8 +2,8 @@
 
 
 // let fifaDate = new Date("Dec 03, 2022 13:00").getTime();
-let fifaDate = new Date("Feb 04, 2023 13:00").getTime();
-// let fifaDate = new Date("Jan 17, 2023 09:50").getTime();
+// let fifaDate = new Date("Feb 04, 2023 13:00").getTime();
+let fifaDate = new Date("March 17, 2023 19:00").getTime();
 
 let x = setInterval(function () {
     let now = new Date().getTime();

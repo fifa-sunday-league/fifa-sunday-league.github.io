@@ -52,7 +52,6 @@ body {
 
 .single-player {
   background: #1c1111bf;
-  padding: 8px;
   border: solid 1px white;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
@@ -71,12 +70,14 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin: 12px 10px 8px 10px;
 }
 
 .player-name {
   text-align: center;
   color: white;
   font-weight: bold;
+  margin-right: 5px;
 }
 
 .countDown {
@@ -162,5 +163,49 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+}
+
+.last-matches {
+  margin-top: 0px;
+  background: #000000bf;
+  /* padding: 0px 2px 0px 0px; */
+  padding: 4px 8px 4px 8px;
+  border-top: 1px solid #ffffffc7;
+  /* border-bottom: 1px solid; */
+  margin-bottom: 0px;
+  color: white;
+  font-weight: bold;
+}
+
+.win {
+  color: #5eac24;
+}
+
+.draw {
+  color: grey;
+}
+
+.lose {
+  color: red;
+}
+
+.outOfForm {
+  background: red;
+}
+
+.inForm {
+  background: greenyellow;
+}
+
+.player-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
