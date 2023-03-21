@@ -1,12 +1,13 @@
-html{
+html {
     // background-image: url("./../img/FIFA-World-Cup-Qatar-2022.jpg");
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
     height: 100%;
-    
+
 }
-body{
+
+body {
     background-image: url("./../img/CL.jpg");
     // background-position: center;
     background-repeat: no-repeat;
@@ -17,7 +18,8 @@ body{
     margin: 0px;
     padding: 0px;
 }
-.main-content{
+
+.main-content {
     // position: absolute;
     // top: 50%;
     // left: 50%;
@@ -31,8 +33,8 @@ body{
     // height: 100px;
     // background: grey;
 
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
     // position: absolute;
     // top: 40%;
     /* left: 50%; */
@@ -46,7 +48,8 @@ justify-content: center;
     // align-items: center;
     justify-content: flex-start;
 }
-.players-wrapper{
+
+.players-wrapper {
 
 
     display: flex;
@@ -56,7 +59,8 @@ justify-content: center;
     align-items: center;
     justify-content: space-around;
 }
-.single-player{
+
+.single-player {
     background: #1c1111bf;
     // padding: 8px;
     border: solid 1px white;
@@ -64,12 +68,13 @@ justify-content: center;
     border-top-right-radius: 18px;
     margin-bottom: 50px;
 }
-.player-img{
+
+.player-img {
     border-radius: 33px;
     padding: 5px;
     background: slategrey;
     display: block;
-  
+
     margin-left: auto;
     margin-right: auto;
     object-fit: cover;
@@ -78,32 +83,37 @@ justify-content: center;
     border-radius: 50%;
     margin: 12px 10px 8px 10px;
 }
-.player-name{
+
+.player-name {
     text-align: center;
     color: white;
     font-weight: bold;
     margin-right: 5px;
 }
-.countDown{
+
+.countDown {
     display: flex;
     margin-bottom: 17px;
     // display: none;
 
 }
-.countDown div{
+
+.countDown div {
     flex-basis: 100px;
     text-align: center;
 }
-.countDown div p{
+
+.countDown div p {
     font-size: 60px;
     margin-bottom: 5px;
     margin-top: 5px;
     margin-left: 20px;
     color: white;
-   
+
 
 }
-.countDown div span{
+
+.countDown div span {
     margin-left: 20px;
     font-size: 25px;
     font-weight: bold;
@@ -111,130 +121,197 @@ justify-content: center;
     color: white;
 
 }
-.countDown-heading{
+
+.countDown-heading {
     color: white;
     font-weight: bold;
 }
-.fifa-time{
+
+.fifa-time {
     color: white;
     font-size: 30px;
 }
-.hide{
-    display:none;
+
+.hide {
+    display: none;
 }
-@media all and (max-width: 345px){
+
+@media all and (max-width: 1550px) {
+    .players-stats-wrapper {
+        width: 30% !important;
+
+    }
+
+    // .players-wrapper {
+    //     width: 100%;
+
+    //     justify-content: space-around;
+    // }
+}
+
+@media all and (max-width: 1100px) {
+    .players-stats-wrapper {
+        width: 40% !important;
+
+    }
+
+    // .players-wrapper {
+    //     width: 100%;
+
+    //     justify-content: space-around;
+    // }
+}
+
+@media all and (max-width: 1050px) {
+    .player-img {
+        width: 125px;
+        height: 125px;
+
+    }
+
+    // .players-wrapper {
+    //     width: 100%;
+
+    //     justify-content: space-around;
+    // }
+
+}
+
+@media all and (max-width: 920px) {
+    body {
+        background-position: center;
+    }
+
+    .main-content {
+        // width: auto;
+        top: 0;
+    }
+
+    .players-wrapper {
+        flex-direction: column;
+        width: 200px !important;
+    }
+
+    .player-img {
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .countDown div span {
+        font-size: 20px;
+    }
+
+    .players-stats-wrapper {
+        width: 100% !important;
+
+    }
+}
+
+@media all and (max-width: 345px) {
     .countDown div p {
         font-size: 34px;
     }
+
     .countDown div span {
         font-size: 13px !important;
     }
-}
-@media all and (max-width: 920px) {
-   body{
-    background-position: center;
-   } 
-   .main-content{
-    // width: auto;
-    top: 0;
-   }
-   .players-wrapper{
-    flex-direction: column;
-    width: 200px !important;
-   }
-   .player-img{
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-   }
-   .countDown div span{
-    font-size: 20px;
-   }
+
+    .player-stats-img {
+
+
+        padding-left: 5px;
+    }
 }
 
-@media all and (max-width: 1050px){
-.player-img{
-    width: 125px;
-    height: 125px;
 
-}
-// .players-wrapper {
-//     width: 100%;
-    
-//     justify-content: space-around;
-// }
-}
 
-.last-matches{ 
+
+
+
+.last-matches {
     margin-top: 0px;
     background: #000000bf;
     /* padding: 0px 2px 0px 0px; */
     padding: 4px 8px 4px 8px;
-    border-top: 1px solid #ffffffc7;;
+    border-top: 1px solid #ffffffc7;
+    ;
     /* border-bottom: 1px solid; */
     margin-bottom: 0px;
     color: white;
     font-weight: bold;
 }
-.win{
+
+.win {
     color: #5eac24;
     font-weight: bold;
 }
-.draw{
+
+.draw {
     color: grey;
     font-weight: bold;
-    
-}
-.lose{
-    color:red;
-    font-weight: bold;
-    
-    
 
 }
-.outOfForm{
+
+.lose {
+    color: red;
+    font-weight: bold;
+
+
+
+}
+
+.outOfForm {
     background: red;
 }
-.inForm{
+
+.inForm {
     background: greenyellow;
 }
-.player-wrapper{
+
+.player-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-.player-stats-img{
+.player-stats-img {
     object-fit: cover;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     padding-left: 20px;
 }
-.player-profile{
+
+.player-profile {
     display: flex;
 }
-.player-stats-name{
+
+.player-stats-name {
     text-align: center;
     color: white;
     font-weight: bold;
     margin-left: 5px;
 }
-.event-wrapper{
+
+.event-wrapper {
     width: 100%;
 }
-.countDown-heading{
+
+.countDown-heading {
     text-align: center;
 }
-.players-stats-wrapper{
+
+.players-stats-wrapper {
     width: 22%;
-  
+
     // margin-left: 10px;
 }
-.player-stats{
+
+.player-stats {
     display: flex;
- 
+
     justify-content: space-between;
     margin-bottom: 5px;
     border-bottom: 1px solid white;
@@ -242,71 +319,82 @@ justify-content: center;
 
 
 }
-.boldme{
+
+.boldme {
     text-align: center;
 
     font-weight: bold;
     margin-left: 10px;
 }
-.stats-heading{
+
+.stats-heading {
     text-align: center;
     color: white;
     font-weight: bold;
 
 }
-.player-played{
+
+.player-played {
     text-align: center;
-color:white;
+    color: white;
     font-weight: bold;
     margin-left: 5px;
     padding: 0px 7px 0px 7px;
 }
-.players-results-wrapper{
+
+.players-results-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.unknown{
+.unknown {
     opacity: 0;
 }
-.unknown-matches{
+
+.unknown-matches {
     color: white;
     font-weight: bold;
     padding-right: 14px;
     border-right: 1px solid white;
 
 }
-.unknown-win{
+
+.unknown-win {
     color: #5eac24;
     font-weight: bold;
     padding: 0px 10px 0px 10px;
     border-right: 1px solid white;
 }
-.unknown-draw{
+
+.unknown-draw {
     color: grey;
     font-weight: bold;
     padding: 0px 10px 0px 10px;
     border-right: 1px solid white;
 }
-.unknown-lose{
+
+.unknown-lose {
     color: red;
     font-weight: bold;
     padding: 0px 10px 0px 10px;
 }
-.player-wins{
+
+.player-wins {
     padding: 0px 7px 0px 27px;
     // text-align: center;
     // font-weight: bold;
     // margin-left: 10px;
     // color: #5eac24;
 }
+
 // .player-played{
 //     padding: 0px 7px 0px 7px;
 // }
-.player-draws{
+.player-draws {
     padding: 0px 7px 0px 7px;
 }
-.player-lose{
+
+.player-lose {
     padding: 0px 13px 0px 7px;
 }

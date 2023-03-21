@@ -118,12 +118,22 @@ body {
   display: none;
 }
 
-@media all and (max-width: 345px) {
-  .countDown div p {
-    font-size: 34px;
+@media all and (max-width: 1550px) {
+  .players-stats-wrapper {
+    width: 30% !important;
   }
-  .countDown div span {
-    font-size: 13px !important;
+}
+
+@media all and (max-width: 1100px) {
+  .players-stats-wrapper {
+    width: 40% !important;
+  }
+}
+
+@media all and (max-width: 1050px) {
+  .player-img {
+    width: 125px;
+    height: 125px;
   }
 }
 
@@ -149,12 +159,20 @@ body {
   .countDown div span {
     font-size: 20px;
   }
+  .players-stats-wrapper {
+    width: 100% !important;
+  }
 }
 
-@media all and (max-width: 1050px) {
-  .player-img {
-    width: 125px;
-    height: 125px;
+@media all and (max-width: 345px) {
+  .countDown div p {
+    font-size: 34px;
+  }
+  .countDown div span {
+    font-size: 13px !important;
+  }
+  .player-stats-img {
+    padding-left: 5px;
   }
 }
 

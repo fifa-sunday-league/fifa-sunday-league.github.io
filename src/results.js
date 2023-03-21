@@ -16,28 +16,28 @@
 // }
 
 let fifaPlayers = {
-    mirkoKaramihov: {
+    mK: {
         fifaRecord: ['D', 'L', 'W', 'W', 'D', 'L', 'W', 'L', 'L', 'L', 'L', 'L', 'L'],
         attendedEventsDates: ["17.03.23"],
         wins: 0,
         draws: 0,
         lose: 0
     },
-    georgiBalabanov: {
+    gB: {
         fifaRecord: ['D', 'W', 'L', 'L', 'D', 'W', 'L', 'W', 'L', 'L', 'L', 'L', 'W'],
         attendedEventsDates: ["17.03.23"],
         wins: 0,
         draws: 0,
         lose: 0
     },
-    ivanBalabanov: {
+    iB: {
         fifaRecord: ['D', 'W', 'L', 'L', 'D', 'L', 'W', 'L', 'W', 'W', 'W', 'W', 'W'],
         attendedEventsDates: ["17.03.23"],
         wins: 0,
         draws: 0,
         lose: 0
     },
-    borislavNikolov: {
+    bN: {
         fifaRecord: ['D', 'L', 'W', 'W', 'D', 'W', 'L', 'W', 'W', 'W', 'W', 'W', 'L'],
         attendedEventsDates: ["17.03.23"],
         wins: 0,
@@ -45,21 +45,21 @@ let fifaPlayers = {
         lose: 0
 
     },
-    venelinPetrov: {
+    vP: {
         fifaRecord: [],
         attendedEventsDates: [],
         wins: 0,
         draws: 0,
         lose: 0
     },
-    denisMyahov: {
+    dM: {
         fifaRecord: [],
         attendedEventsDates: [],
         wins: 0,
         draws: 0,
         lose: 0
     },
-    rumenRashev: {
+    rR: {
         fifaRecord: [],
         attendedEventsDates: [],
         wins: 0,
@@ -91,37 +91,86 @@ for (const player in fifaPlayers) {
     fifaPlayers[player].played = fifaPlayers[player].fifaRecord.length;
 
 }
-let borkoStats = document.querySelector('#borko')
+// let playerName = document.querySelector('#bN')
 
-borkoStats.querySelector('.player-played').textContent = fifaPlayers.borislavNikolov.played;
-if (fifaPlayers.borislavNikolov.wins < 10) {
-    borkoStats.querySelector('.player-wins').textContent = ' ' + fifaPlayers.borislavNikolov.wins;
+// playerName.querySelector('.player-played').textContent = fifaPlayers[borislavNikolov].played;
+// if (fifaPlayers.borislavNikolov.wins < 10) {
+//     playerName.querySelector('.player-wins').textContent = ' ' + fifaPlayers.borislavNikolov.wins;
 
-}
-else {
-    borkoStats.querySelector('.player-wins').textContent = fifaPlayers.borislavNikolov.wins;
-}
+// }
+// else {
+//     playerName.querySelector('.player-wins').textContent = fifaPlayers.borislavNikolov.wins;
+// }
 
-if (fifaPlayers.borislavNikolov.draws < 10) {
-    borkoStats.querySelector('.player-draws').textContent = ' ' + fifaPlayers.borislavNikolov.draws;
+// if (fifaPlayers.borislavNikolov.draws < 10) {
+//     playerName.querySelector('.player-draws').textContent = ' ' + fifaPlayers.borislavNikolov.draws;
 
-}
-else {
-    borkoStats.querySelector('.player-draws').textContent = fifaPlayers.borislavNikolov.draws;
-}
-
-
-if(fifaPlayers.borislavNikolov.lose <10){
-    borkoStats.querySelector('.player-lose').textContent = ' ' + fifaPlayers.borislavNikolov.lose;
-}
-else{
-    borkoStats.querySelector('.player-lose').textContent = fifaPlayers.borislavNikolov.lose;
-}
+// }
+// else {
+//     playerName.querySelector('.player-draws').textContent = fifaPlayers.borislavNikolov.draws;
+// }
 
 
+// if(fifaPlayers.borislavNikolov.lose <10){
+//     playerName.querySelector('.player-lose').textContent = ' ' + fifaPlayers.borislavNikolov.lose;
+// }
+// else{
+//     playerName.querySelector('.player-lose').textContent = fifaPlayers.borislavNikolov.lose;
+// }
+let borkoId = 'bN'
+let ivanId = 'iB'
+let geogiId = 'gB'
+let miroId = 'mK'
+let denisId = 'dM'
+let venkoId = 'vP'
+let rumbaId = 'rR'
+calculate(borkoId)
+calculate(ivanId)
+calculate(geogiId)
+calculate(miroId)
+calculate(denisId)
+calculate(venkoId)
+calculate(rumbaId)
 
 
 export { fifaPlayers }
 
 // 'D', 'L', 'W', 'L'
 // 'W', 'W', 'W', 'W'
+
+
+
+
+
+
+
+function calculate(id){
+    let playerName = `${id}Stats`
+    playerName = document.querySelector(`#${id}`)
+
+    playerName.querySelector('.player-played').textContent = fifaPlayers[id].played;
+   
+    if (fifaPlayers[id].wins < 10) {
+        playerName.querySelector('.player-wins').textContent = ' ' + fifaPlayers[id].wins;
+    
+    }
+    else {
+        playerName.querySelector('.player-wins').textContent = fifaPlayers[id].wins;
+    }
+    
+    if (fifaPlayers[id].draws < 10) {
+        playerName.querySelector('.player-draws').textContent = ' ' + fifaPlayers[id].draws;
+    
+    }
+    else {
+        playerName.querySelector('.player-draws').textContent = fifaPlayers[id].draws;
+    }
+    
+    
+    if(fifaPlayers[id].lose <10){
+        playerName.querySelector('.player-lose').textContent = ' ' + fifaPlayers[id].lose;
+    }
+    else{
+        playerName.querySelector('.player-lose').textContent = fifaPlayers[id].lose;
+    }
+}
