@@ -18,8 +18,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  top: 40%;
   /* left: 50%; */
   margin-top: -50px;
   margin-left: -50px;
@@ -30,9 +28,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -43,11 +38,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: auto;
-  width: 85%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .single-player {
@@ -176,14 +172,17 @@ body {
 
 .win {
   color: #5eac24;
+  font-weight: bold;
 }
 
 .draw {
   color: grey;
+  font-weight: bold;
 }
 
 .lose {
   color: red;
+  font-weight: bold;
 }
 
 .outOfForm {
@@ -204,5 +203,128 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+}
+
+.player-stats-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding-left: 20px;
+}
+
+.player-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.player-stats-name {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.event-wrapper {
+  width: 100%;
+}
+
+.countDown-heading {
+  text-align: center;
+}
+
+.players-stats-wrapper {
+  width: 22%;
+}
+
+.player-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+  border-bottom: 1px solid white;
+  margin-top: 6px;
+}
+
+.boldme {
+  text-align: center;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.stats-heading {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.player-played {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+  padding: 0px 7px 0px 7px;
+}
+
+.players-results-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.unknown {
+  opacity: 0;
+}
+
+.unknown-matches {
+  color: white;
+  font-weight: bold;
+  padding-right: 14px;
+  border-right: 1px solid white;
+}
+
+.unknown-win {
+  color: #5eac24;
+  font-weight: bold;
+  padding: 0px 10px 0px 10px;
+  border-right: 1px solid white;
+}
+
+.unknown-draw {
+  color: grey;
+  font-weight: bold;
+  padding: 0px 10px 0px 10px;
+  border-right: 1px solid white;
+}
+
+.unknown-lose {
+  color: red;
+  font-weight: bold;
+  padding: 0px 10px 0px 10px;
+}
+
+.player-wins {
+  padding: 0px 7px 0px 27px;
+}
+
+.player-draws {
+  padding: 0px 7px 0px 7px;
+}
+
+.player-lose {
+  padding: 0px 13px 0px 7px;
 }
 /*# sourceMappingURL=style.css.map */
