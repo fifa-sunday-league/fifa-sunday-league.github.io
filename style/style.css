@@ -304,7 +304,7 @@ body {
 }
 
 .unknown {
-  opacity: 0;
+  padding-left: 13px;
 }
 
 .unknown-matches {
