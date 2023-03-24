@@ -2,7 +2,10 @@ import { fifaPlayers } from "./results.js";
 
 
 
-
+let notApplicable = document.querySelectorAll('.not-applicable').forEach((x)=>{
+    x.textContent = 'W'
+})
+console.log(notApplicable)
 // let fifaDate = new Date("Dec 03, 2022 13:00").getTime();
 // let fifaDate = new Date("Feb 04, 2023 13:00").getTime();
 
