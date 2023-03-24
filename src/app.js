@@ -8,25 +8,7 @@ import { fifaPlayers } from "./results.js";
 
 let fifaDate = new Date("March 25, 2023 19:00").getTime();
 
-// console.log(fifaPlayers.borislavNikolov.fifaRecord.length,fifaPlayers.borislavNikolov.fifaRecord)
-// console.log(fifaPlayers.mirkoKarahihov.fifaRecord.length)
-// console.log(fifaPlayers.ivanBalabanov.fifaRecord.length)
-// console.log(fifaPlayers.georgiBalabanov.fifaRecord.length)
 
-// console.log(fifaPlayers)
-// for (const player in fifaPlayers) {
-//     console.log('Current player is  - >',player)
-//  let currentPlayerWins = fifaPlayers[player].fifaRecord.filter(x => x.includes('W'));
-//  let currentPlayerDraws = fifaPlayers[player].fifaRecord.filter(x => x.includes('D'));
-//  let currentPlayerLose = fifaPlayers[player].fifaRecord.filter(x => x.includes('L'));
-
-
-//  console.log('Wins - ',currentPlayerWins)
-//  console.log('Draws - ',currentPlayerDraws)
-//  console.log('Lose - ',currentPlayerLose)
-//  console.log('Total matches - ',fifaPlayers[player].fifaRecord.length)
-//  console.log('--------------')
-// }
 
 let x = setInterval(function () {
     let now = new Date().getTime();
