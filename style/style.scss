@@ -61,6 +61,7 @@ body {
 }
 
 .single-player {
+    position: relative;
     background: #1c1111bf;
     // padding: 8px;
     border: solid 1px white;
@@ -89,13 +90,14 @@ body {
     color: white;
     font-weight: bold;
     margin-right: 5px;
+    margin-top: 25px;
 }
 
 .countDown {
     display: flex;
     margin-bottom: 17px;
     // display: none;
-
+    justify-content: center;
 }
 
 .countDown div {
@@ -141,6 +143,9 @@ body {
         width: 30% !important;
 
     }
+    .teams-stats-wrapper{
+        width: 30% !important;  
+    }
 
     // .players-wrapper {
     //     width: 100%;
@@ -154,7 +159,9 @@ body {
         width: 40% !important;
 
     }
-
+    .teams-stats-wrapper{
+        width: 40% !important;  
+    }
     // .players-wrapper {
     //     width: 100%;
 
@@ -167,6 +174,10 @@ body {
         width: 125px;
         height: 125px;
 
+    }
+    .welcome-content-wrapper{
+        flex-direction: column;
+        align-items: center;
     }
 
     // .players-wrapper {
@@ -206,6 +217,10 @@ body {
         width: 100% !important;
 
     }
+    .teams-stats-wrapper{
+        width: 100% !important;
+
+    }
 }
 
 @media all and (max-width: 345px) {
@@ -233,7 +248,7 @@ body {
     margin-top: 0px;
     background: #000000bf;
     /* padding: 0px 2px 0px 0px; */
-    padding: 4px 8px 4px 8px;
+    padding: 4px 0px 4px 0px;
     border-top: 1px solid #ffffffc7;
     ;
     /* border-bottom: 1px solid; */
@@ -270,6 +285,7 @@ body {
 }
 
 .player-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -281,11 +297,12 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    padding-left: 20px;
+    margin: 0px 5px 0px 5px;
 }
 
 .player-profile {
     display: flex;
+    position: relative;
 }
 
 .player-stats-name {
@@ -339,7 +356,9 @@ body {
     color: white;
     font-weight: bold;
     margin-left: 5px;
-    padding: 0px 7px 0px 7px;
+    // padding: 0px 7px 0px 7px;
+    
+    padding: 0px 20px 0px 7px;
 }
 
 .players-results-wrapper {
@@ -348,9 +367,9 @@ body {
     justify-content: space-between;
 }
 
-.unknown {
-   padding-left:13px ;
-}
+// .unknown {
+//    padding-left:13px ;
+// }
 
 .unknown-matches {
     color: white;
@@ -381,11 +400,9 @@ body {
 }
 
 .player-wins {
-    padding: 0px 7px 0px 27px;
-    // text-align: center;
-    // font-weight: bold;
-    // margin-left: 10px;
-    // color: #5eac24;
+    // padding: 0px 7px 0px 27px;
+    padding: 0px 7px 0px 24px;
+ 
 }
 
 // .player-played{
@@ -397,4 +414,39 @@ body {
 
 .player-lose {
     padding: 0px 13px 0px 7px;
+}
+.teams-stats-wrapper{
+    width: 22%;
+}
+.welcome-content-wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.team-trophy{
+    position: absolute;
+    top: 3px;
+    left: 39px;
+ 
+}
+.trophy{
+    position: absolute;
+    top: 3px;
+    left: 39px;
+ 
+}
+.unknown-points{
+    color: rgb(221, 233, 54);
+    font-weight: bold;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid white;
+}
+.player-pts{
+    color:rgb(221, 233, 54);
+}
+.cups-wrapper{
+    position: absolute;
+    top: -20px;
+    left: 3px;
+    width: 100px;
 }

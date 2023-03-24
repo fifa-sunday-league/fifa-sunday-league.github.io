@@ -15,6 +15,8 @@
 //     attendedEvents:["17.03.23"]
 // }
 
+import { calculate,calculateWinDrawLose } from "../utils/calculator.js";
+
 let fifaPlayers = {
     mK: {
         fifaRecord: ['D', 'L', 'W', 'W', 'D', 'L', 'W', 'L', 'L', 'L', 'L', 'L', 'L','L'],
@@ -68,29 +70,79 @@ let fifaPlayers = {
     }
 
 }
-let fifaCouples = {
-    borkoMirko: {},
-    borkoJorko: {},
-    borkoIvan: {},
+let fifaTeams = {
+    bNiB: {
+        fifaRecord: ['W', 'W', 'W', 'W'],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
+    bNmK: {
+        fifaRecord: ['D', 'L', 'W', 'W','L','L'],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
+    bNgB: {
+        fifaRecord: ['D', 'W', 'L', 'W'],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
 
-    mirkoJorko: {},
-    mirkoIvan: {},
+    // D W  L W
+    mKgB: {
+        fifaRecord: ['L', 'L', 'L', 'L'],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
+    mKiB: {
+     
+        fifaRecord: ['D', 'L', 'W', 'L'],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
 
-    ivanJorko: {},
+    iBgB: {
+        fifaRecord: ['D', 'W', 'L', 'L','W','W'],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
 }
-for (const player in fifaPlayers) {
-    console.log('Current player is  - >', player)
-    let currentPlayerWins = fifaPlayers[player].fifaRecord.filter(x => x.includes('W'));
-    fifaPlayers[player].wins = currentPlayerWins.length;
-    let currentPlayerDraws = fifaPlayers[player].fifaRecord.filter(x => x.includes('D'));
-    fifaPlayers[player].draws = currentPlayerDraws.length;
+// let borkoId = 'bN'
+// let ivanId = 'iB'
+// let geogiId = 'gB'
+// let miroId = 'mK'
+// let denisId = 'dM'
+// let venkoId = 'vP'
+// let rumbaId = 'rR'
+let borkoIvan ='bNiB'
+let playersAbbreviation = ['bN','iB','gB','mK','dM','vP','rR'];
+let teamsAbbreviation = ['bNmK','bNgB','bNiB','mKgB','mKiB','iBgB'];
+// old working calc
+// for (const player in fifaPlayers) {
+//     console.log('Current player is  - >', player)
+//     let currentPlayerWins = fifaPlayers[player].fifaRecord.filter(x => x.includes('W'));
+//     fifaPlayers[player].wins = currentPlayerWins.length;
+//     let currentPlayerDraws = fifaPlayers[player].fifaRecord.filter(x => x.includes('D'));
+//     fifaPlayers[player].draws = currentPlayerDraws.length;
 
-    let currentPlayerLose = fifaPlayers[player].fifaRecord.filter(x => x.includes('L'));
-    fifaPlayers[player].lose = currentPlayerLose.length;
-    fifaPlayers[player].attendedEvents = fifaPlayers[player].attendedEventsDates.length;
-    fifaPlayers[player].played = fifaPlayers[player].fifaRecord.length;
+//     let currentPlayerLose = fifaPlayers[player].fifaRecord.filter(x => x.includes('L'));
+//     fifaPlayers[player].lose = currentPlayerLose.length;
+//     fifaPlayers[player].attendedEvents = fifaPlayers[player].attendedEventsDates.length;
+//     fifaPlayers[player].played = fifaPlayers[player].fifaRecord.length;
 
-}
+// }
+// console.log(fifaPlayers.bN)
 // let playerName = document.querySelector('#bN')
 
 // playerName.querySelector('.player-played').textContent = fifaPlayers[borislavNikolov].played;
@@ -117,23 +169,35 @@ for (const player in fifaPlayers) {
 // else{
 //     playerName.querySelector('.player-lose').textContent = fifaPlayers.borislavNikolov.lose;
 // }
-let borkoId = 'bN'
-let ivanId = 'iB'
-let geogiId = 'gB'
-let miroId = 'mK'
-let denisId = 'dM'
-let venkoId = 'vP'
-let rumbaId = 'rR'
-calculate(borkoId)
-calculate(ivanId)
-calculate(geogiId)
-calculate(miroId)
-calculate(denisId)
-calculate(venkoId)
-calculate(rumbaId)
 
 
-export { fifaPlayers }
+calculateWinDrawLose(fifaPlayers)
+calculateWinDrawLose(fifaTeams)
+
+playersAbbreviation.forEach(player => {
+    calculate(fifaPlayers,player)
+});
+// calculate(fifaTeams,'bNiB')
+// console.log(fifaTeams)
+// console.log(teamsAbbreviation)
+teamsAbbreviation.forEach(team => {
+    calculate(fifaTeams,team)
+    console.log('team - >',team)
+
+});
+
+// calculate
+// calculate(fifaPlayers,borkoId)
+// calculate(ivanId)
+// calculate(geogiId)
+// calculate(miroId)
+// calculate(denisId)
+// calculate(venkoId)
+// calculate(rumbaId)
+// calculate(rumbaId)
+
+
+export { fifaPlayers as fifaPlayers }
 
 // 'D', 'L', 'W', 'L'
 // 'W', 'W', 'W', 'W'
@@ -144,33 +208,51 @@ export { fifaPlayers }
 
 
 
-function calculate(id){
-    let playerName = `${id}Stats`
-    playerName = document.querySelector(`#${id}`)
+// function calculate(id){
+//     let playerName = `${id}Stats`
+//     playerName = document.querySelector(`#${id}`)
 
-    playerName.querySelector('.player-played').textContent = fifaPlayers[id].played;
+//     playerName.querySelector('.player-played').textContent = objectForCalc[id].played;
    
-    if (fifaPlayers[id].wins < 10) {
-        playerName.querySelector('.player-wins').textContent = ' ' + fifaPlayers[id].wins;
+//     if (objectForCalc[id].wins < 10) {
+//         playerName.querySelector('.player-wins').textContent = ' ' + objectForCalc[id].wins;
     
-    }
-    else {
-        playerName.querySelector('.player-wins').textContent = fifaPlayers[id].wins;
-    }
+//     }
+//     else {
+//         playerName.querySelector('.player-wins').textContent = objectForCalc[id].wins;
+//     }
     
-    if (fifaPlayers[id].draws < 10) {
-        playerName.querySelector('.player-draws').textContent = ' ' + fifaPlayers[id].draws;
+//     if (objectForCalc[id].draws < 10) {
+//         playerName.querySelector('.player-draws').textContent = ' ' + objectForCalc[id].draws;
     
-    }
-    else {
-        playerName.querySelector('.player-draws').textContent = fifaPlayers[id].draws;
-    }
+//     }
+//     else {
+//         playerName.querySelector('.player-draws').textContent = objectForCalc[id].draws;
+//     }
     
     
-    if(fifaPlayers[id].lose <10){
-        playerName.querySelector('.player-lose').textContent = ' ' + fifaPlayers[id].lose;
-    }
-    else{
-        playerName.querySelector('.player-lose').textContent = fifaPlayers[id].lose;
-    }
-}
+//     if(objectForCalc[id].lose <10){
+//         playerName.querySelector('.player-lose').textContent = ' ' + objectForCalc[id].lose;
+//     }
+//     else{
+//         playerName.querySelector('.player-lose').textContent = objectForCalc[id].lose;
+//     }
+// }
+
+
+
+// function calculateWinDrawLose(objectForCalc){
+//     for (const record in objectForCalc) {
+//         console.log('Current player is  - >', record)
+//         let currentPlayerWins = objectForCalc[record].fifaRecord.filter(x => x.includes('W'));
+//         objectForCalc[record].wins = currentPlayerWins.length;
+//         let currentPlayerDraws = objectForCalc[record].fifaRecord.filter(x => x.includes('D'));
+//         objectForCalc[record].draws = currentPlayerDraws.length;
+    
+//         let currentPlayerLose = objectForCalc[record].fifaRecord.filter(x => x.includes('L'));
+//         objectForCalc[record].lose = currentPlayerLose.length;
+//         objectForCalc[record].attendedEvents = objectForCalc[record].attendedEventsDates.length;
+//         objectForCalc[record].played = objectForCalc[record].fifaRecord.length;
+    
+//     }
+// }

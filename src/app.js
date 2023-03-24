@@ -6,14 +6,14 @@ import { fifaPlayers } from "./results.js";
 // let fifaDate = new Date("Dec 03, 2022 13:00").getTime();
 // let fifaDate = new Date("Feb 04, 2023 13:00").getTime();
 
-let fifaDate = new Date("March 17, 2023 19:00").getTime();
+let fifaDate = new Date("March 25, 2023 19:00").getTime();
 
 // console.log(fifaPlayers.borislavNikolov.fifaRecord.length,fifaPlayers.borislavNikolov.fifaRecord)
 // console.log(fifaPlayers.mirkoKarahihov.fifaRecord.length)
 // console.log(fifaPlayers.ivanBalabanov.fifaRecord.length)
 // console.log(fifaPlayers.georgiBalabanov.fifaRecord.length)
 
-console.log(fifaPlayers)
+// console.log(fifaPlayers)
 // for (const player in fifaPlayers) {
 //     console.log('Current player is  - >',player)
 //  let currentPlayerWins = fifaPlayers[player].fifaRecord.filter(x => x.includes('W'));
