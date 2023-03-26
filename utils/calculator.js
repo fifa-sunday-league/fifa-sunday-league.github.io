@@ -7,7 +7,7 @@ console.log(id)
 
    
     if (objectForCalc[id].wins < 10) {
-        playerName.querySelector('.player-wins').textContent = ' ' + objectForCalc[id].wins;
+        playerName.querySelector('.player-wins').textContent =  (objectForCalc[id].wins).toString() + ' ' ;
     
     }
     else {
@@ -15,7 +15,7 @@ console.log(id)
     }
     
     if (objectForCalc[id].draws < 10) {
-        playerName.querySelector('.player-draws').textContent = ' ' + objectForCalc[id].draws;
+        playerName.querySelector('.player-draws').textContent = (objectForCalc[id].draws).toString()+ ' ' ;
     
     }
     else {
@@ -24,7 +24,7 @@ console.log(id)
     
     
     if(objectForCalc[id].lose <10){
-        playerName.querySelector('.player-lose').textContent = ' ' + objectForCalc[id].lose;
+        playerName.querySelector('.player-lose').textContent =(objectForCalc[id].lose).toString()+ ' ' ;
     }
     else{
         playerName.querySelector('.player-lose').textContent = objectForCalc[id].lose;
