@@ -466,9 +466,11 @@ display: none;
 .event-date{
     color: white;
     font-weight: bold;
-    border: 2px solid #b1ac1b;
+    border: 1px solid #b1ac1b;
+
     width: fit-content;
     margin: auto;
     padding: 2px 12px 2px 12px;
     border-radius: 12px;
+    background: #1e18146b;
 }
