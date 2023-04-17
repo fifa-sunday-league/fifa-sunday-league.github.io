@@ -420,4 +420,16 @@ body {
   display: none;
   width: 22%;
 }
+
+.event-date {
+  color: white;
+  font-weight: bold;
+  border: 2px solid #b1ac1b;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 2px 12px 2px 12px;
+  border-radius: 12px;
+}
 /*# sourceMappingURL=style.css.map */
