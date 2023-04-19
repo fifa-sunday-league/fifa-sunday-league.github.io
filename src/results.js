@@ -88,6 +88,13 @@ let fifaPlayers = {
         wins: 0,
         draws: 0,
         lose: 0
+    },
+    dD: {
+        fifaRecord: [],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
     }
 
 }
@@ -234,7 +241,7 @@ let fifaTeams = {
 // let venkoId = 'vP'
 // let rumbaId = 'rR'
 // 'gBvP'
-let playersAbbreviation = ['bN', 'iB', 'gB', 'mK', 'dM', 'vP', 'rR'];
+let playersAbbreviation = ['bN', 'iB', 'gB', 'mK', 'dM', 'vP', 'rR','dD'];
 let teamsAbbreviation = ['bNmK', 'bNgB', 'bNiB', 'mKgB', 'mKiB', 'iBgB', 'bNvP', 'gBvP', 'iBvP','gBdM','bNdM','iBdM','vPdM'];
 // old working calc
 // for (const player in fifaPlayers) {
