@@ -417,6 +417,7 @@ body {
 }
 
 .teams-pick-up {
+  display: none;
   width: 22%;
 }
 
