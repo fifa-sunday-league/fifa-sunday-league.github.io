@@ -457,7 +457,7 @@ body {
 }
 
 .teams-pick-up{
-display: none;
+// display: none;
         width: 22%;
     
 
@@ -473,4 +473,29 @@ display: none;
     padding: 2px 12px 2px 12px;
     border-radius: 12px;
     background: #1e18146b;
+}
+
+.countDownPickUp{
+    display: flex;
+    margin-bottom: 17px;
+
+    justify-content: space-around;
+    color: white;
+    font-weight: bold;
+}
+.countDownPickUp div{
+    text-align: center;
+}
+.countDownPickUp p{
+    font-size: 30px;
+}
+.countDownPickUp span{
+    font-size: 22px;
+}
+.team-draws-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+
 }

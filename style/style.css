@@ -417,7 +417,6 @@ body {
 }
 
 .teams-pick-up {
-  display: none;
   width: 22%;
 }
 
@@ -432,5 +431,41 @@ body {
   padding: 2px 12px 2px 12px;
   border-radius: 12px;
   background: #1e18146b;
+}
+
+.countDownPickUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 17px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: white;
+  font-weight: bold;
+}
+
+.countDownPickUp div {
+  text-align: center;
+}
+
+.countDownPickUp p {
+  font-size: 30px;
+}
+
+.countDownPickUp span {
+  font-size: 22px;
+}
+
+.team-draws-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
