@@ -417,7 +417,6 @@ body {
 }
 
 .teams-pick-up {
-  display: none;
   width: 22%;
 }
 
@@ -467,6 +466,5 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
 }
 /*# sourceMappingURL=style.css.map */

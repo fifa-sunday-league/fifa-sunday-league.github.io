@@ -84,7 +84,7 @@ cd.innerHTML = `<p class='fifa-time'> Its FIFA TIME!</p>`
     }
 }, 1000);
 
-let teamDraws = new Date("April 19, 2023 16:20").getTime();
+// let teamDraws = new Date("April 20, 2023 14:30").getTime();
 let y = setInterval(function () {
     let now = new Date().getTime();
     let distance = teamDraws - now;
@@ -102,47 +102,47 @@ let cd = document.querySelector('.countDownPickUp')
 let heading = document.querySelector('.countDown-heading').classList.add("hide");
 cd.innerHTML = `<p class='fifa-time'> First match is:</p>`
 let eventOpeningWrapper = document.querySelector('.team-draws-wrapper').style.display='flex'
-// let players = ['HighButWinner', 'Ball', 'RU', 'Champ'];
+let players = ['HighButWinner', 'Ball', 'RU', 'Champ','Gudiominator'];
 
 
-// let newPlayers = []
-// let teamNumber = 1;
-// //
+let newPlayers = []
+let teamNumber = 1;
+//
 
 
-// for (let index = 1; index <= 4; index++) {
-//     let randomPlayer = players[Math.floor(Math.random() * players.length)]
-//     players = players.filter((x) => {
-//         return x !== randomPlayer
-//     })
-//     newPlayers.push(randomPlayer)
-//     //   console.log(index,' player is :',randomPlayer)
+for (let index = 1; index <= 4; index++) {
+    let randomPlayer = players[Math.floor(Math.random() * players.length)]
+    players = players.filter((x) => {
+        return x !== randomPlayer
+    })
+    newPlayers.push(randomPlayer)
+    //   console.log(index,' player is :',randomPlayer)
 
-// }
-// console.log('Teams')
+}
+console.log('Teams')
 
-// let startNumber= 0;
-// const wrapper = document.querySelector('.team-draws-wrapper')
+let startNumber= 0;
+const wrapper = document.querySelector('.team-draws-wrapper')
 
-// for (let index = 0; index < newPlayers.length; index += 2) {
+for (let index = 0; index < newPlayers.length; index += 2) {
 
-// const startTeams = wrapper.querySelectorAll('.player-profile')
+const startTeams = wrapper.querySelectorAll('.player-profile')
 
-// let imgs =startTeams[startNumber].querySelectorAll('.player-stats-img')
-// imgs[0].src =`/img/players/${newPlayers[index]}.jpg`
-// // startTeams[startNumber].querySelectorAll('.player-stats-img')[0].src =`/img/players/${newPlayers[index]}.jpg`
+let imgs =startTeams[startNumber].querySelectorAll('.player-stats-img')
+imgs[0].src =`/img/players/${newPlayers[index]}.jpg`
+// startTeams[startNumber].querySelectorAll('.player-stats-img')[0].src =`/img/players/${newPlayers[index]}.jpg`
 
-// imgs[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
-// // startTeams[startNumber].querySelectorAll('.player-stats-img')[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
+imgs[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
+// startTeams[startNumber].querySelectorAll('.player-stats-img')[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
 
-// startNumber++;
-// console.log(' INCREMENTED',startNumber)
+startNumber++;
+console.log(' INCREMENTED',startNumber)
 
-//     console.log('index',index)
-//     console.log(teamNumber, 'is', newPlayers[index], '&', newPlayers[index + 1])
+    console.log('index',index)
+    console.log(teamNumber, 'is', newPlayers[index], '&', newPlayers[index + 1])
   
-//     teamNumber++;
-// }
+    teamNumber++;
+}
     }
 }, 1000);
 
