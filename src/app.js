@@ -84,7 +84,7 @@ cd.innerHTML = `<p class='fifa-time'> Its FIFA TIME!</p>`
     }
 }, 1000);
 
-// let teamDraws = new Date("April 20, 2023 14:30").getTime();
+let teamDraws = new Date("April 20, 2023 14:30").getTime();
 let y = setInterval(function () {
     let now = new Date().getTime();
     let distance = teamDraws - now;
@@ -110,39 +110,37 @@ let teamNumber = 1;
 //
 
 
-for (let index = 1; index <= 4; index++) {
-    let randomPlayer = players[Math.floor(Math.random() * players.length)]
-    players = players.filter((x) => {
-        return x !== randomPlayer
-    })
-    newPlayers.push(randomPlayer)
-    //   console.log(index,' player is :',randomPlayer)
+// for (let index = 1; index <= 4; index++) {
+//     let randomPlayer = players[Math.floor(Math.random() * players.length)]
+//     players = players.filter((x) => {
+//         return x !== randomPlayer
+//     })
+//     newPlayers.push(randomPlayer)
 
-}
-console.log('Teams')
 
-let startNumber= 0;
-const wrapper = document.querySelector('.team-draws-wrapper')
+// }
+// console.log('Teams')
 
-for (let index = 0; index < newPlayers.length; index += 2) {
+// let startNumber= 0;
+// const wrapper = document.querySelector('.team-draws-wrapper')
 
-const startTeams = wrapper.querySelectorAll('.player-profile')
+// for (let index = 0; index < newPlayers.length; index += 2) {
 
-let imgs =startTeams[startNumber].querySelectorAll('.player-stats-img')
-imgs[0].src =`/img/players/${newPlayers[index]}.jpg`
-// startTeams[startNumber].querySelectorAll('.player-stats-img')[0].src =`/img/players/${newPlayers[index]}.jpg`
+// const startTeams = wrapper.querySelectorAll('.player-profile')
 
-imgs[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
-// startTeams[startNumber].querySelectorAll('.player-stats-img')[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
+// let imgs =startTeams[startNumber].querySelectorAll('.player-stats-img')
+// imgs[0].src =`/img/players/${newPlayers[index]}.jpg`
 
-startNumber++;
-console.log(' INCREMENTED',startNumber)
+// imgs[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
 
-    console.log('index',index)
-    console.log(teamNumber, 'is', newPlayers[index], '&', newPlayers[index + 1])
+// startNumber++;
+// console.log(' INCREMENTED',startNumber)
+
+//     console.log('index',index)
+//     console.log(teamNumber, 'is', newPlayers[index], '&', newPlayers[index + 1])
   
-    teamNumber++;
-}
+//     teamNumber++;
+// }
     }
 }, 1000);
 
