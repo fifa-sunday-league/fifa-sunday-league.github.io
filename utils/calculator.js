@@ -1,3 +1,4 @@
+const draws = false;
  function calculate(objectForCalc,id){
     let playerName = `${id}Stats`
     playerName = document.querySelector(`#${id}`)
@@ -53,4 +54,6 @@ function calculateWinDrawLose(objectForCalc){
     }
     console.log('results - >', objectForCalc)
 }
-export{calculate,calculateWinDrawLose}
+
+
+export{calculate,calculateWinDrawLose,draws}
