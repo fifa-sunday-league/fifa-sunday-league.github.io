@@ -22,7 +22,10 @@ import {
 
 let fifaPlayers = {
     mK: {
-        fifaRecord: ['D', 'L', 'W', 'W', 'D', 'L', 'W', 'L', 'L', 'L', 'L', 'L', 'L', 'L'],
+        fifaRecord: ['D', 'L', 'W', 'W', 'D', 'L', 'W', 'L', 'L', 'L', 'L', 'L', 'L', 'L',
+            //'W','W','W','D','L','W','W'
+            'W', 'W', 'W', 'D', 'L', 'W', 'W', 'L', 'L', 'L', 'W', 'L', 'D', 'L', 'L'
+        ],
         attendedEventsDates: ["17.03.23"],
         wins: 0,
         draws: 0,
@@ -33,6 +36,8 @@ let fifaPlayers = {
             'L', 'D', 'L', 'L', 'L', 'L', 'L', 'D', 'D', 'W', 'W', 'L', 'W',
             'L', 'D', 'L', 'D', 'L', 'W', 'L', 'L', 'D', 'W', 'W', 'W',
             // L D L D L - W L L - D W W W 09.04
+            // L  W W W  L W L L 22.04
+            'L', 'W', 'W', 'W', 'L', 'W', 'L', 'L'
         ],
         attendedEventsDates: ["17.03.23"],
         wins: 0,
@@ -42,8 +47,10 @@ let fifaPlayers = {
     iB: {
         fifaRecord: ['D', 'W', 'L', 'L', 'D', 'L', 'W', 'L', 'W', 'W', 'W', 'W', 'W', 'W',
             'W', 'D', 'W', 'W', 'L', 'L', 'L', 'D', 'D', 'L', 'L', 'W', 'L',
-            'W', 'W', 'D', 'W', 'L', 'L', 'L', 'W', 'L', 'D', 'W', 'W'
+            'W', 'W', 'D', 'W', 'L', 'L', 'L', 'W', 'L', 'D', 'W', 'W',
             // W W D W -       L L L W -             L D W W 09.04
+            // W L L D W L L    22.04
+            'W', 'L', 'L', 'D', 'W', 'L', 'L', 'L', 'L', 'L', 'W', 'W', 'D', 'W', 'W', 'L', 'L', 'L', 'W', 'D', 'W'
         ],
         attendedEventsDates: ["17.03.23", '25.03.23', ],
         wins: 0,
@@ -53,8 +60,10 @@ let fifaPlayers = {
     bN: {
         fifaRecord: ['D', 'L', 'W', 'W', 'D', 'W', 'L', 'W', 'W', 'W', 'W', 'W', 'L', 'L',
             'W', 'D', 'W', 'W', 'W', 'W', 'W', 'D', 'D', 'W', 'W', 'L', 'W',
-            'W', 'W', 'D', 'D', 'W', 'W', 'W', 'W', 'W', 'D', 'L', 'W'
+            'W', 'W', 'D', 'D', 'W', 'W', 'W', 'W', 'W', 'D', 'L', 'W',
             // W W D  -     D  W  W      W  -     W W D L     - W 09.04
+            // L L L D W W W (w 13 / d 3 / L 5)
+            'L', 'L', 'L', 'D', 'W', 'W', 'W', 'W', 'W', 'W', 'L', 'W', 'D', 'W', 'W', 'W', 'W', 'W', 'L', 'D', 'W'
         ],
         attendedEventsDates: ["17.03.23", '25.03.23'],
         wins: 0,
@@ -74,8 +83,9 @@ let fifaPlayers = {
     },
     dM: {
         fifaRecord: [
-            'L', 'L', 'W', 'D', 'W', 'W', 'L', 'L', 'L', 'L', 'L', 'L'
+            'L', 'L', 'W', 'D', 'W', 'W', 'L', 'L', 'L', 'L', 'L', 'L',
             // L L - W D W W - L L L - L L L 09.04
+            'L', 'L', 'L', 'L', 'L', 'W', 'D', 'L'
         ],
         attendedEventsDates: [],
         wins: 0,
@@ -90,7 +100,9 @@ let fifaPlayers = {
         lose: 0
     },
     dD: {
-        fifaRecord: [],
+        fifaRecord: [
+            'W', 'L', 'L', 'D', 'L', 'W', 'L', 'W', 'W', 'W', 'L', 'L', 'D', 'W', 'W', 'W', 'L', 'D', 'L'
+        ],
         attendedEventsDates: [],
         wins: 0,
         draws: 0,
@@ -102,7 +114,8 @@ let fifaTeams = {
     bNiB: {
         fifaRecord: ['W', 'W', 'W', 'W',
             'W', 'D', 'W', 'W',
-            'W', 'W', 'D'
+            'W', 'W', 'D',
+            'W', 'W', 'W', 'W', 'W', 'D', 'D', 'D', 'L'
             // bI W W D 09.04
         ],
         attendedEventsDates: [],
@@ -111,7 +124,9 @@ let fifaTeams = {
         lose: 0
     },
     bNmK: {
-        fifaRecord: ['D', 'L', 'W', 'W', 'L', 'L'],
+        fifaRecord: ['D', 'L', 'W', 'W', 'L', 'L',
+            'W', 'W'
+        ],
         attendedEventsDates: [],
         wins: 0,
         draws: 0,
@@ -119,8 +134,9 @@ let fifaTeams = {
     },
     bNgB: {
         fifaRecord: ['D', 'W', 'L', 'W',
-            'D', 'W', 'W', 'L', 'W',
-'W','W',
+            'D', 'W', 'W', 'L', 'W', 'W', 'W',
+            'L'
+
             //bG W W 09.04
         ],
         attendedEventsDates: [],
@@ -129,9 +145,19 @@ let fifaTeams = {
         lose: 0
     },
     //new team
+    bNdD: {
+        fifaRecord: ['W', 'W', 'W', 'W', 'W', 'W', 'L', 'L', 'L'
+
+            //bG W W 09.04
+        ],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
     bNdM: {
         fifaRecord: [
-'D','W','W','L',
+            'D', 'W', 'W', 'L',
             // bD D W W L
         ],
         attendedEventsDates: [],
@@ -142,7 +168,7 @@ let fifaTeams = {
 
 
     mKgB: {
-        fifaRecord: ['L', 'L', 'L', 'L'],
+        fifaRecord: ['L', 'L', 'L', 'L', 'W', 'W', 'W'],
         attendedEventsDates: [],
         wins: 0,
         draws: 0,
@@ -150,7 +176,26 @@ let fifaTeams = {
     },
     mKiB: {
 
-        fifaRecord: ['D', 'L', 'W', 'L'],
+        fifaRecord: ['D', 'L', 'W', 'L',
+            'L', 'L', 'L', 'L', 'W'
+        ],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
+    //new
+    mKdD: {
+
+        fifaRecord: ['D', 'D', 'L'],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
+    mKdM: {
+
+        fifaRecord: ['L', 'L'],
         attendedEventsDates: [],
         wins: 0,
         draws: 0,
@@ -160,7 +205,8 @@ let fifaTeams = {
     iBgB: {
         fifaRecord: ['D', 'W', 'L', 'L', 'W', 'W',
             'L', 'L', 'L', 'D',
-'L','D','W','W',
+            'L', 'D', 'W', 'W',
+            'L',
             //L D W W 09.04
         ],
         attendedEventsDates: [],
@@ -181,9 +227,9 @@ let fifaTeams = {
     },
     bNvP: {
         fifaRecord: ['W', 'W', 'W', 'D',
-        'W', 'W', 'D'
-    //bV W W D 09.04
-    ],
+            'W', 'W', 'D'
+            //bV W W D 09.04
+        ],
         attendedEventsDates: [],
         wins: 0,
         draws: 0,
@@ -191,9 +237,9 @@ let fifaTeams = {
     },
     iBvP: {
         fifaRecord: ['D', 'L', 'L', 'W', 'L',
-        'L', 'L', 'W',
-    // iV - L L W 09.04
-    ],
+            'L', 'L', 'W',
+            // iV - L L W 09.04
+        ],
         attendedEventsDates: [],
         wins: 0,
         draws: 0,
@@ -202,7 +248,20 @@ let fifaTeams = {
     //new teams
     iBdM: {
         fifaRecord: [
-            'W', 'L'
+            'W', 'L',
+            'W', 'L', 'L', 'L'
+
+            // dI W L 09.04
+        ],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
+    iBdD: {
+        fifaRecord: [
+            'W', 'L',
+
 
             // dI W L 09.04
         ],
@@ -231,6 +290,27 @@ let fifaTeams = {
         draws: 0,
         lose: 0
     },
+    gBdD: {
+        fifaRecord: [
+            'L', 'L', 'W'
+
+        ],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
+    dDdM: {
+        fifaRecord: [
+            'L', 'D'
+
+        ],
+        attendedEventsDates: [],
+        wins: 0,
+        draws: 0,
+        lose: 0
+    },
+
 
 }
 // let borkoId = 'bN'
@@ -241,8 +321,10 @@ let fifaTeams = {
 // let venkoId = 'vP'
 // let rumbaId = 'rR'
 // 'gBvP'
-let playersAbbreviation = ['bN', 'iB', 'gB', 'mK', 'dM', 'vP', 'rR','dD'];
-let teamsAbbreviation = ['bNmK', 'bNgB', 'bNiB', 'mKgB', 'mKiB', 'iBgB', 'bNvP', 'gBvP', 'iBvP','gBdM','bNdM','iBdM','vPdM'];
+let playersAbbreviation = ['bN', 'iB', 'gB', 'mK', 'dM', 'vP', 'rR', 'dD'];
+let teamsAbbreviation = ['bNmK', 'bNgB', 'bNiB', 'mKgB', 'mKiB', 'iBgB', 'bNvP', 'gBvP', 'iBvP', 'gBdM', 'bNdM', 'iBdM', 'vPdM',
+    'bNdD', 'gBdD', 'mKdD', 'mKdM', 'dDdM', 'iBdD'
+];
 // old working calc
 // for (const player in fifaPlayers) {
 //     console.log('Current player is  - >', player)
