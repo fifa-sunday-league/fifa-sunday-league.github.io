@@ -17,7 +17,10 @@ fifaDate = new Date("April 29, 2023 12:00").getTime();
 // console.log(drawDate)
 let x = setInterval(function () {
     let now = new Date().getTime();
+    console.log(now)
     let distance = fifaDate - now;
+    console.log(distance)
+
 // console.log(now)
 // console.log(drawDate)
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
