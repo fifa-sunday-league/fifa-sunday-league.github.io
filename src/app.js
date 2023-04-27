@@ -13,8 +13,8 @@ let fifaDate = ''
 // fifaDate = new Date("April 09, 2023 12:00").getTime();
 fifaDate = new Date("April 29, 2023 12:00").getTime();
 
-const drawDate = new Date("April 22, 2023 18:15").getTime();
-console.log(drawDate)
+// const drawDate = new Date("April 22, 2023 18:15").getTime();
+// console.log(drawDate)
 let x = setInterval(function () {
     let now = new Date().getTime();
     let distance = fifaDate - now;
@@ -28,50 +28,50 @@ let x = setInterval(function () {
     document.getElementById('hours').innerHTML = hours;
     document.getElementById('minutes').innerHTML = minutes;
     document.getElementById('seconds').innerHTML = seconds;
-if(Number(now) >= Number(drawDate)){
-console.log(" BOOOOOOOOOOM")
-let players = ['HighButWinner', 'Ball', 'RU', 'Champ',''];
+// if(Number(now) >= Number(drawDate)){
+// console.log(" BOOOOOOOOOOM")
+// let players = ['HighButWinner', 'Ball', 'RU', 'Champ',''];
 
 
-let newPlayers = []
-let teamNumber = 1;
-//
+// let newPlayers = []
+// let teamNumber = 1;
+// //
 
 
-for (let index = 1; index <= 4; index++) {
-    let randomPlayer = players[Math.floor(Math.random() * players.length)]
-    players = players.filter((x) => {
-        return x !== randomPlayer
-    })
-    newPlayers.push(randomPlayer)
-    //   console.log(index,' player is :',randomPlayer)
+// for (let index = 1; index <= 4; index++) {
+//     let randomPlayer = players[Math.floor(Math.random() * players.length)]
+//     players = players.filter((x) => {
+//         return x !== randomPlayer
+//     })
+//     newPlayers.push(randomPlayer)
+//     //   console.log(index,' player is :',randomPlayer)
 
-}
-console.log('Teams')
+// }
+// console.log('Teams')
 
-let startNumber= 0;
-const wrapper = document.querySelector('.team-draws-wrapper')
+// let startNumber= 0;
+// const wrapper = document.querySelector('.team-draws-wrapper')
 
-for (let index = 0; index < newPlayers.length; index += 2) {
+// for (let index = 0; index < newPlayers.length; index += 2) {
 
-const startTeams = wrapper.querySelectorAll('.player-profile')
+// const startTeams = wrapper.querySelectorAll('.player-profile')
 
-let imgs =startTeams[startNumber].querySelectorAll('.player-stats-img')
-imgs[0].src =`/img/players/${newPlayers[index]}.jpg`
-// startTeams[startNumber].querySelectorAll('.player-stats-img')[0].src =`/img/players/${newPlayers[index]}.jpg`
+// let imgs =startTeams[startNumber].querySelectorAll('.player-stats-img')
+// imgs[0].src =`/img/players/${newPlayers[index]}.jpg`
+// // startTeams[startNumber].querySelectorAll('.player-stats-img')[0].src =`/img/players/${newPlayers[index]}.jpg`
 
-imgs[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
-// startTeams[startNumber].querySelectorAll('.player-stats-img')[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
+// imgs[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
+// // startTeams[startNumber].querySelectorAll('.player-stats-img')[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
 
-startNumber++;
-console.log(' INCREMENTED',startNumber)
+// startNumber++;
+// console.log(' INCREMENTED',startNumber)
 
-    console.log('index',index)
-    console.log(teamNumber, 'is', newPlayers[index], '&', newPlayers[index + 1])
+//     console.log('index',index)
+//     console.log(teamNumber, 'is', newPlayers[index], '&', newPlayers[index + 1])
   
-    teamNumber++;
-}
-}
+//     teamNumber++;
+// }
+// }
 
 
 
