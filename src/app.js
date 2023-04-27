@@ -17,9 +17,7 @@ fifaDate = new Date("April 29, 2023 12:00").getTime();
 // console.log(drawDate)
 let x = setInterval(function () {
     let now = new Date().getTime();
-    console.log(now)
     let distance = fifaDate - now;
-    console.log(distance)
 
 // console.log(now)
 // console.log(drawDate)
@@ -79,6 +77,7 @@ let x = setInterval(function () {
 
 
     if(distance <0){
+        console.log('EXECUTE.')
 let cd = document.querySelector('.countDown')
 let heading = document.querySelector('.countDown-heading').classList.add("hide");
 cd.innerHTML = `<p class='fifa-time'> Its FIFA TIME!</p>`
@@ -88,62 +87,62 @@ cd.innerHTML = `<p class='fifa-time'> Its FIFA TIME!</p>`
 }, 1000);
 
 let teamDraws = new Date("April 20, 2023 14:30").getTime();
-let y = setInterval(function () {
-    let now = new Date().getTime();
-    let distance = teamDraws - now;
+// let y = setInterval(function () {
+//     let now = new Date().getTime();
+//     let distance = teamDraws - now;
 
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById('daysPickUp').innerHTML = days;
-    document.getElementById('hoursPickUp').innerHTML = hours;
-    document.getElementById('minutesPickUp').innerHTML = minutes;
-    document.getElementById('secondsPickUp').innerHTML = seconds;
-    if(distance <0){
-let cd = document.querySelector('.countDownPickUp')
-let heading = document.querySelector('.countDown-heading').classList.add("hide");
-cd.innerHTML = `<p class='fifa-time'> First match is:</p>`
-let eventOpeningWrapper = document.querySelector('.team-draws-wrapper').style.display='flex'
-let players = ['HighButWinner', 'Ball', 'RU', 'Champ','Gudiominator'];
-
-
-let newPlayers = []
-let teamNumber = 1;
-//
+//     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//     document.getElementById('daysPickUp').innerHTML = days;
+//     document.getElementById('hoursPickUp').innerHTML = hours;
+//     document.getElementById('minutesPickUp').innerHTML = minutes;
+//     document.getElementById('secondsPickUp').innerHTML = seconds;
+//     if(distance <0){
+// let cd = document.querySelector('.countDownPickUp')
+// let heading = document.querySelector('.countDown-heading').classList.add("hide");
+// cd.innerHTML = `<p class='fifa-time'> First match is:</p>`
+// let eventOpeningWrapper = document.querySelector('.team-draws-wrapper').style.display='flex'
+// let players = ['HighButWinner', 'Ball', 'RU', 'Champ','Gudiominator'];
 
 
-// for (let index = 1; index <= 4; index++) {
-//     let randomPlayer = players[Math.floor(Math.random() * players.length)]
-//     players = players.filter((x) => {
-//         return x !== randomPlayer
-//     })
-//     newPlayers.push(randomPlayer)
+// let newPlayers = []
+// let teamNumber = 1;
+// //
 
 
-// }
-// console.log('Teams')
+// // for (let index = 1; index <= 4; index++) {
+// //     let randomPlayer = players[Math.floor(Math.random() * players.length)]
+// //     players = players.filter((x) => {
+// //         return x !== randomPlayer
+// //     })
+// //     newPlayers.push(randomPlayer)
 
-// let startNumber= 0;
-// const wrapper = document.querySelector('.team-draws-wrapper')
 
-// for (let index = 0; index < newPlayers.length; index += 2) {
+// // }
+// // console.log('Teams')
 
-// const startTeams = wrapper.querySelectorAll('.player-profile')
+// // let startNumber= 0;
+// // const wrapper = document.querySelector('.team-draws-wrapper')
 
-// let imgs =startTeams[startNumber].querySelectorAll('.player-stats-img')
-// imgs[0].src =`/img/players/${newPlayers[index]}.jpg`
+// // for (let index = 0; index < newPlayers.length; index += 2) {
 
-// imgs[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
+// // const startTeams = wrapper.querySelectorAll('.player-profile')
 
-// startNumber++;
-// console.log(' INCREMENTED',startNumber)
+// // let imgs =startTeams[startNumber].querySelectorAll('.player-stats-img')
+// // imgs[0].src =`/img/players/${newPlayers[index]}.jpg`
 
-//     console.log('index',index)
-//     console.log(teamNumber, 'is', newPlayers[index], '&', newPlayers[index + 1])
+// // imgs[1].src=`/img/players/${newPlayers[index + 1 ]}.jpg`
+
+// // startNumber++;
+// // console.log(' INCREMENTED',startNumber)
+
+// //     console.log('index',index)
+// //     console.log(teamNumber, 'is', newPlayers[index], '&', newPlayers[index + 1])
   
-//     teamNumber++;
-// }
-    }
-}, 1000);
+// //     teamNumber++;
+// // }
+//     }
+// }, 1000);
 
