@@ -11,7 +11,7 @@ import { fifaPlayers } from "./results.js";
 let fifaDate = ''
 // let fifaDate = new Date("March 25, 2023 19:00").getTime();
 // fifaDate = new Date("April 09, 2023 12:00").getTime();
-fifaDate = new Date("April 29, 2023 12:00").getTime();
+// fifaDate = new Date("April 29, 2023 12:00").getTime();
 
 // const drawDate = new Date("April 22, 2023 18:15").getTime();
 // console.log(drawDate)
